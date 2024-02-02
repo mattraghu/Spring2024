@@ -22,7 +22,8 @@ void BuildMap(string currentPath, int currentLineNum)
     int i = 1;
 
     string line;
-    cin >> line;
+    getline(cin, line);
+
     // End of tag
     if (line[i] == '/')
     {
@@ -39,11 +40,7 @@ void BuildMap(string currentPath, int currentLineNum)
     // Beggining of tag
 
     while (line[i] != ' ' && line[i] != '>')
-    {
-        cout << line[i];
         i++;
-    }
-    cout << endl;
 
     string tag = line.substr(1, i - 1);
 
@@ -56,25 +53,17 @@ void BuildMap(string currentPath, int currentLineNum)
         currentPath = currentPath + "." + tag;
     }
 
-    cout << currentPath << endl;
-
-    cout << i << endl;
-    cout << line[i] << endl;
-
     while (line[i] != '>')
     {
-        cout << "GOT HERE" << endl;
         i++;
         int start = i;
         // Get attribute name
-        cout << i << endl;
         while (line[i] != ' ')
+        {
             i++;
-        cout << i << endl;
-        cout << "A" << endl;
+        }
 
-        string attributeName = line.substr(start, i - 1);
-        cout << attributeName << endl;
+        string attributeName = line.substr(start, (i - 1) - start + 1);
 
         // Get attribute value
         i += 4;
@@ -82,13 +71,9 @@ void BuildMap(string currentPath, int currentLineNum)
         while (line[i] != '"')
             i++;
 
-        cout << "B" << endl;
-
-        string attributeValue = line.substr(start, i - 1);
+        string attributeValue = line.substr(start, (i - 1) - start + 1);
 
         tagMap[currentPath + "~" + attributeName] = attributeValue;
-
-        cout << "C" << endl;
 
         i++;
     }
@@ -99,16 +84,44 @@ void BuildMap(string currentPath, int currentLineNum)
 
 int main()
 {
+
+    string test = "testing123";
+    cout << test.substr(100, test.size() + 10) << endl;
+
     // Recieve Number of Lines and Queries
     int Q;
-    cin >> numOfLines >> Q;
+
+    string numLinesAndQueries;
+    getline(cin, numLinesAndQueries);
+    numOfLines = stoi(numLinesAndQueries.substr(0, numLinesAndQueries.find(" ")));
+    Q = stoi(numLinesAndQueries.substr(numLinesAndQueries.find(" ") + 1));
 
     // Build Map
     BuildMap("", 0);
 
-    // For now lets just print the map
-    for (auto i = tagMap.begin(); i != tagMap.end(); i++)
+    // // For now lets just print the map
+    // for (auto i = tagMap.begin(); i != tagMap.end(); i++)
+    // {
+    //     cout << i->first << " : " << i->second << endl;
+    // }
+
+    // Queries
+    string query;
+    while (Q--)
     {
-        cout << i->first << " " << i->second << endl;
+        getline(cin, query);
+
+        cout << "Trying to process " << query << endl;
+
+        auto result = tagMap.find(query);
+
+        if (result == tagMap.end())
+        {
+            cout << "Not found!" << endl;
+        }
+        else
+        {
+            cout << result->second << endl;
+        }
     }
 }

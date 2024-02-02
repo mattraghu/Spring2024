@@ -188,7 +188,7 @@ $$
 v^2 & = \frac{2GM}{R} \\
 v & = \sqrt{\frac{2GM}{R}}
 \end{align*}
-$$A
+$$
 
 ## Important Numbers
 
@@ -202,7 +202,7 @@ $$A
 
 ### The Greeks
 
-**Eccentric Model** : The Earth is at the center of the universe and the planets move in circles around it
+**Geocentric Model** : The Earth is at the center of the universe and the planets move in circles around it
 
 Noticed a period of **retrograde motion** in the sky
 
@@ -211,5 +211,44 @@ Noticed a period of **retrograde motion** in the sky
 
 ![Alt text](image-11.png)
 
-Explained by **epicycles**, which are small circles that planets move in as they orbit the Earth.
-$$
+#### Ptolemy (100-170 AD)
+
+- Created a model that explained retrograde motion using **epicycles**
+- **Epicycles** : Small circles that planets move in as they orbit the Earth
+
+#### Aristarchus (310-230 BC)
+
+- First to propose a **heliocentric model** (Sun at the center of the universe)
+- He noticed that the stars are much farther away than the Sun
+
+### The Middle Ages
+
+- The Church was the main authority
+
+#### Copernicus (1473-1543)
+
+- Proposed a heliocentric model
+- He was the first to use the term "revolution" to describe the Earth's motion around the Sun
+
+![Alt text](image-12.png)
+
+### The Renaissance
+
+#### Tycho Brahe (1546-1601)
+
+- Made the most accurate measurements of the positions of the stars and planets
+- Showed that geocentric and heliocentric models were both incorrect through his observations
+- Would lead to Kepler's Laws
+
+#### Kepler (1571-1630)
+
+- Used Brahe's data to come up with his laws (see above)
+
+### The Scientific Revolution
+
+#### Galileo (1564-1642)
+
+- Used a telescope to observe the sky
+- Discovered the moons of Jupiter, the phases of Venus, and sunspots
+- The only way for the phases of Venus to occur as he observed was if it was orbiting the Sun
+- After it was essentially proven that the Earth was not at the center of the universe
