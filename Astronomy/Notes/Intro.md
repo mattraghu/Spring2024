@@ -208,12 +208,13 @@ Noticed a period of **retrograde motion** in the sky
 
 - **Retrograde Motion** : The apparent motion of a planet in a direction opposite to that of other bodies within its system as observed from a particular vantage point
 - Planets usually move from West to East relative to the stars. However, they sometimes appear to move from East to West for a short period of time.
+- Plato and Aristotle believed that the Earth was at the center of the universe
 
 ![Alt text](image-11.png)
 
 #### Ptolemy (100-170 AD)
 
-- Created a model that explained retrograde motion using **epicycles**
+- Created a model (Ptolemaic Model) that explained retrograde motion using **epicycles**
 - **Epicycles** : Small circles that planets move in as they orbit the Earth
 
 #### Aristarchus (310-230 BC)
