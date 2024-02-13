@@ -2,6 +2,8 @@
 
 ## Problem 1 - In this problem you can assume the asteroid orbits are circular, i.e. that the ’distance’ is the radius of asteroid’s orbit.
 
+_On my own_
+
 ### a) Asteroid 121 Hermione orbits the Sun at distance of 3.45 AU.
 
 #### What is the orbital period of this asteroid in years?
@@ -60,6 +62,8 @@ $$
 
 ## Problem 2 - Find the altitude h above the ground of a geosynchronous satellite, i.e. one that has the same period of rotation as the Earth. These satellites, when placed in an orbit lying in the Earth’s equatorial plane, will always appear to sit above the same point on the Earth. Clearly, this is very useful for satellite communication, as you need not reposition satellite dish in order to track the satellite.
 
+_On my own_
+
 - $T$ = 24 hours = 86400 s
 - $R_{\text{Earth}}$ = 6371 km = 6.371 $\times 10^6$ m
 - $M_{\text{Earth}}$ = 5.972 $\times 10^{24}$ kg
@@ -81,6 +85,8 @@ h &\approx 35860.625 \text{ km} \\
 $$
 
 ## Problem 3 - This problem is dealing with the orbits of space missions. You can assume that all orbits are circular
+
+_On my own_
 
 ### a) The International Space Station orbits the Earth in the so-called Low Earth Orbit at height of 400km.
 
@@ -158,7 +164,9 @@ T &\approx 6.44 \times 10^3 \text{ s} \\
 \end{align*}
 $$
 
-## In this problem you’ll compare the energy of an asteroid impact with those of the Hiroshima bomb (yield 15 kt TNT) and the Castle Bravo bomb (the largest nuclear test by the US with the yield of 15 Mt TNT). Energy yield of 1 ton of TNT is equivalent to 109 cal = 4.184 ∗ 109 J. The tons here are metric tons. Suppose that the impact speed of an asteroid is 25 km/s. This is given at impact, i.e. gravitational attraction is already taken into account and you need not add potential energy. You can assume that the asteroid is perfectly spher- ical in shape and made of stony material (’S-type asteroid’) with the mean density of ρ = 2700 kg/m3
+## Problem 4 In this problem you’ll compare the energy of an asteroid impact with those of the Hiroshima bomb (yield 15 kt TNT) and the Castle Bravo bomb (the largest nuclear test by the US with the yield of 15 Mt TNT). Energy yield of 1 ton of TNT is equivalent to 109 cal = 4.184 ∗ 109 J. The tons here are metric tons. Suppose that the impact speed of an asteroid is 25 km/s. This is given at impact, i.e. gravitational attraction is already taken into account and you need not add potential energy. You can assume that the asteroid is perfectly spher- ical in shape and made of stony material (’S-type asteroid’) with the mean density of ρ = 2700 kg/m3
+
+_On my own_
 
 ### Calculate the impact energy for the asteroid diameter of 10 m, 100 m and 1km in Joules, and express it in terms of energy yields of the Hiroshima and Castle Bravo bombs.
 
