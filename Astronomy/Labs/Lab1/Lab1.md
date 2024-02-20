@@ -19,20 +19,48 @@ In this lab, we will plot the orbital period and orbital radius of Jupiter's moo
 
 ## Data
 
-After collecting data on the orbital period and orbital radius of Jupiter's moons (https://www.britannica.com/topic/moons-of-Jupiter-2236909), I prepared a python script to format it and do the calculations. Check my github repository for the code.
+After collecting data on the orbital period and orbital radius of Jupiter's moons (https://www.britannica.com/topic/moons-of-Jupiter-2236909), I prepared a python script to format it and do the calculations. Check my github repository for the code (https://github.com/mattraghu/Spring2024/tree/main/Astronomy/Labs/Lab1).
 
-The head of the dataframe looks like this:
-
-| Name     | Orbital Period (days) | Radius (km) | Distance from Jupiter (km) | Galilean | Orbital Period (s) | Radius (m) | Distance from Jupiter (m) | R (m)       | R3                     | T2                |
-| -------- | --------------------- | ----------- | -------------------------- | -------- | ------------------ | ---------- | ------------------------- | ----------- | ---------------------- | ----------------- |
-| Metis    | 0.3                   | 21.5        | 128000                     | False    | 25919.999999999996 | 21500.0    | 128000000                 | 128021500.0 | 2.0982089455139382e+24 | 671846399.9999998 |
-| Adrastea | 0.3                   | 8.2         | 129000                     | False    | 25919.999999999996 | 8200.0     | 129000000                 | 129008200.0 | 2.1470983946224314e+24 | 671846399.9999998 |
-| Amalthea | 0.5                   | 83.5        | 181400                     | False    | 43200.0            | 83500.0    | 181400000                 | 181483500.0 | 5.977387881860633e+24  | 1866240000.0      |
-| Thebe    | 0.68                  | 49.3        | 221900                     | False    | 58752.0            | 49300.0    | 221900000                 | 221949300.0 | 1.0933553615416017e+25 | 3451797504.0      |
-| Io       | 1.77                  | 1821.6      | 421800                     | True     | 152928.0           | 1821600.0  | 421800000                 | 423621600.0 | 7.6021124363922526e+25 | 23386973184.0     |
+![alt text](image.png)
 
 ## Plots
 
-The data is plotted with plotly, and the slope of the line is calculated using numpy's polyfit function.
+### All Moons
+
+![All Moons](AllMoons.png)
+
+### Galilean Moons
+
+![Galilean Moons](GalileanMoons.png)
+
+## Jupiter's Mass
 
 ### All Moons
+
+$ m = 3.146086440304132e-16 $
+
+$$
+\begin{align*}
+M &= \frac{4\pi^2}{Gm} \\
+&= \frac{4\pi^2}{6.67430e-11 \cdot 3.146086440304132e-16} \\
+&= 1.88011e+27 kg
+\end{align*}
+$$
+
+### Galilean Moons
+
+$m = 3.104676779596539e-16$
+
+$$
+\begin{align*}
+M &= \frac{4\pi^2}{Gm} \\
+&= \frac{4\pi^2}{6.67430e-11 \cdot 3.104676779596539e-16} \\
+&= 1.90519e+27
+\end{align*}
+$$
+
+## Conclusion
+
+Compared to the actual mass of Jupiter (1.8982e+27 kg) (https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html) the calculated mass is very close. (For all the moons the percent error was -.953% and for the Galilean moons the percent error was .368%)
+
+It goes to show how powerful Kepler's laws are and how they can be used to calculate the mass of celestial bodies. Of course, it is also important to be aware of the limitations of the model as real life factors can affect the results.
