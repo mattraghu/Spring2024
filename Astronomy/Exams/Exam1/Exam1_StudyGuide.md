@@ -31,6 +31,60 @@
 - **Declination** - North or south
 - **Right Ascension** - East or west
 
+## History of Astronomy
+
+### The Greeks
+
+**Geocentric Model** : The Earth is at the center of the universe and the planets move in circles around it
+
+Noticed a period of **retrograde motion** in the sky
+
+- **Retrograde Motion** : The apparent motion of a planet in a direction opposite to that of other bodies within its system as observed from a particular vantage point
+- Planets usually move from West to East relative to the stars. However, they sometimes appear to move from East to West for a short period of time.
+- Plato and Aristotle believed that the Earth was at the center of the universe
+
+![Alt text](image-11.png)
+
+#### Ptolemy (100-170 AD)
+
+- Created a model (Ptolemaic Model) that explained retrograde motion using **epicycles**
+- **Epicycles** : Small circles that planets move in as they orbit the Earth
+
+#### Aristarchus (310-230 BC)
+
+- First to propose a **heliocentric model** (Sun at the center of the universe)
+- He noticed that the stars are much farther away than the Sun
+
+### The Middle Ages
+
+- The Church was the main authority
+
+#### Copernicus (1473-1543)
+
+- Proposed a heliocentric model
+- He was the first to use the term "revolution" to describe the Earth's motion around the Sun
+
+### The Renaissance
+
+#### Tycho Brahe (1546-1601)
+
+- Made the most accurate measurements of the positions of the stars and planets
+- Showed that geocentric and heliocentric models were both incorrect through his observations
+- Would lead to Kepler's Laws
+
+#### Kepler (1571-1630)
+
+- Used Brahe's data to come up with his laws (see above)
+
+### The Scientific Revolution
+
+#### Galileo (1564-1642)
+
+- Used a telescope to observe the sky
+- Discovered the moons of Jupiter, the phases of Venus, and sunspots
+- The only way for the phases of Venus to occur as he observed was if it was orbiting the Sun
+- After it was essentially proven that the Earth was not at the center of the universe
+
 ## Kepler's Laws
 
 ### Kepler's First Law
@@ -192,6 +246,11 @@ $$
 - $\lambda_{\text{max}}$ is the peak wavelength
 - $b$ is Wien's displacement constant ($2.90 \times 10^{-3} \text{m K}$)
 
+#### Blackbody Radiation
+
+1. Hotter objects emit more light at all frequencies per unit area.
+2. Hotter objects emit photons with a higher average energy.
+
 ### Doppler Effect
 
 $$
@@ -244,3 +303,36 @@ Uses mirrors to focus x-rays.
 - Light pollution
 - Atmosphere absorbs certain wavelengths
 - Turbulence causes stars to twinkle. The temperature of the air changes the refractive index of the air.
+
+## The Solar System
+
+### Properties
+
+- Large bodies in the solar system have orderly motions.
+- Planetary orbits are nearly circular and lie nearly in the same plane.
+- Most planets rotate in the same direction in which they orbit.
+- Asteroids and comets are leftovers from the formation of the solar system.
+- Exceptions: Rotation of Ur anus / Venus, Earth's large moon, etc.
+- The solar system contains two types of planets:
+
+#### Terrestrial Planets
+
+- Dense
+- Rocky
+- Small
+- Slow rotation
+
+#### Jovian Planets
+
+- Low density
+- Gaseous
+- Large
+- Fast rotation
+
+### Formation
+
+#### Nebular Theory
+
+1. **Collapse** - The cloud of gas and dust collapses under its own gravity.
+2. **Flattening** - The cloud flattens into a disk.
+3. **Condensation** - The center of the disk becomes the sun and the rest of the disk forms the planets.
