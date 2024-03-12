@@ -65,7 +65,7 @@ maximum solar radiation, but they absorb energy at the wavelengths at which
 Earth radiates energy back to space. In effect they act as a blanket that lets
 heat in, but won’t let it out.
 
-## (a) Supposing the Earth is a perfectly black body (which it isn’t!), find the equilibrium temperature of the Earth assuming it is on a circular orbit about the Sun.
+### (a) Supposing the Earth is a perfectly black body (which it isn’t!), find the equilibrium temperature of the Earth assuming it is on a circular orbit about the Sun.
 
 $$
 \begin{align*}
@@ -86,7 +86,7 @@ T &\approx 278.38777 \text{ K} \\
 \end{align*}
 $$
 
-## (b) What is the wavelength of maximum radiation for the Earth temperature you found in part (a)? What part of spectrum is that?
+### (b) What is the wavelength of maximum radiation for the Earth temperature you found in part (a)? What part of spectrum is that?
 
 $$
 \begin{align*}
