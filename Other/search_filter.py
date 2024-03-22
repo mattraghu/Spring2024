@@ -2,10 +2,11 @@ import tkinter as tk
 from recipe_widget import RecipeWidget
 
 class SearchFilterFrame(tk.Frame):
-    def __init__(self, master, on_search=None, on_filter_change=None, *args, **kwargs):
+    def __init__(self, master, on_search=None, on_filter_change=None, data_manager=None, *args, **kwargs):
         super().__init__(master, *args, **kwargs)
         self.on_search = on_search
         self.on_filter_change = on_filter_change
+        self.data_manager = data_manager
 
         self.create_widgets()
 
@@ -14,6 +15,10 @@ class SearchFilterFrame(tk.Frame):
         self.search_entry.grid(row=0, column=0, padx=10, pady=10)
         self.search_button = tk.Button(self, text="Search", command=self.search)
         self.search_button.grid(row=0, column=1, padx=10, pady=10)
+
+
+        #also on key relase search
+        self.search_entry.bind("<KeyRelease>", lambda event: self.search())
 
         
         # Create a frame for macro filter sliders
@@ -62,17 +67,3 @@ class SearchFilterFrame(tk.Frame):
     def on_recipe_selected(self, recipe_name, macros):
         self.master.show_recipe_detail(recipe_name, macros)
 
-
-
-# To test the frame, you can run it standalone like this:
-if __name__ == "__main__":
-    def mock_search(query):
-        print(f"Searching for: {query}")
-
-    def mock_filter_change(filters):
-        print(f"Filters changed to: {filters}")
-
-    root = tk.Tk()
-    search_frame = SearchFilterFrame(root, on_search=mock_search, on_filter_change=mock_filter_change)
-    search_frame.pack(fill='both', expand=True)
-    root.mainloop()

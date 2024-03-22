@@ -19,7 +19,7 @@ class MacroCounterApp(tk.Tk):
         # self.login_frame.pack(fill='both', expand=True)
 
         # Create the search filter frame
-        self.search_filter_frame = SearchFilterFrame(self, on_search=self.perform_search, on_filter_change=self.apply_filters)
+        self.search_filter_frame = SearchFilterFrame(self, on_search=self.perform_search, on_filter_change=self.apply_filters, data_manager=self.data_manager)
         self.search_filter_frame.pack(fill='both', expand=True)
 
         self.recipe_detail_frame = RecipeDetailFrame(self, "", {})
@@ -27,7 +27,7 @@ class MacroCounterApp(tk.Tk):
 
         # Create the macro count frame (hidden for now)
         # self.macro_count_frame = MacroCountFrame(self)
-        # self.macro_count_frame.pack(fill='both', expand=True)
+        # self.macro_count_frame.pa/ck(fill='both', expand=True)
         # self.macro_count_frame.hide()
 
     def show_recipe_detail(self, recipe_name, macros):
