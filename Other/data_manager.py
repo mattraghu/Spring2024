@@ -7,6 +7,7 @@ class DataManager:
         self.base_endpoint = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
         self.last_search = 0 # To prevent spamming the API
         self.current_results = {}
+        self.current_filters = {}
 
     def load_api_credentials(self, filepath):
         # with open(filepath) as f:
@@ -45,22 +46,31 @@ class DataManager:
             self.current_results = recipes
         else:
             self.current_results = {}
-        return self.current_results
+
+        return self.filter_recipes(self.current_filters)
 
 
     # def search_recipes(self, query):
     #     # Case insensitive search in recipe names
     #     return {name: macros for name, macros in self.recipes.items() if query.lower() in name.lower()}
 
-    def filter_recipes(self, filters):
-        # Filter recipes based on the macronutrient criteria
-        def recipe_matches(recipe, filters):
-            return all(recipe.get(macro) <= amount for macro, amount in filters.items())
 
-        return {name: macros for name, macros in self.recipes.items() if recipe_matches(macros, filters)}
+    def recipe_matches_filters(self, macros, filters):
+        for nutrient, limits in filters.items():
+            if not limits['low'] <= macros[nutrient] <= limits['high']:
+                return False
+        return True
+    def filter_recipes(self, filters):
+        # filters = {'Protein' : {'high': 20, 'low': 10}, 'Carbs': {'high': 30, 'low': 10}, 'Fats': {'high': 15, 'low': 5}, 'Calories': {'high': 500, 'low': 200}}
+        # Filter recipes based on the macronutrient criteria
+        self.current_filters = filters
+        filtered_results = {}
+        for name, macros in self.current_results.items():
+            if self.recipe_matches_filters(macros, filters):
+                filtered_results[name] = macros
+        return filtered_results
 
     def add_random_recipes(self, count=5):
-        # This method would add random recipes to the dictionary for testing purposes
         base_names = ['Salad', 'Stir Fry', 'Soup', 'Pasta', 'Sandwich']
         for _ in range(count):
             name = f"Random {random.choice(base_names)}"

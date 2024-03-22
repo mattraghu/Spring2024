@@ -14,7 +14,7 @@ class MacroCounterApp(tk.Tk):
         # Initialize the data manager
         self.data_manager = DataManager()
 
-        # Create the login frame (for the example, we'll skip straight to search/filter)
+        # Create the login frame 
         # self.login_frame = LoginFrame(self, on_login_success=self.show_search_filter)
         # self.login_frame.pack(fill='both', expand=True)
 
