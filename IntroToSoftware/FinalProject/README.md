@@ -76,11 +76,6 @@ For example, say we scored on frame 5, and our discount factor (gamma) is 0.7. T
 
 to indicate that the actions leading up to frame 5 were good with an exponential decay.
 
-```python
-discounted_epr -= np.mean(discounted_epr)
-discounted_epr /= np.std(discounted_epr)
-```
-
 #### Normalize
 
 Now we aim to normalize the rewards to have a mean of 0 and a standard deviation of 1. This is important for ensuring that the gradients don't explode or vanish.
@@ -120,6 +115,13 @@ for k, v in self.model.items(): # k_0 = W1, k_1 = W2
     self.rmsprop_cache[k] = self.decay_rate * self.rmsprop_cache[k] + (1 - self.decay_rate) * g**2
     self.model[k] += self.learning_rate * g / (np.sqrt(self.rmsprop_cache[k]) + 1e-5)
 ```
+
+This is called Root Mean Square Propagation, and it is a way to update the weights in a way that is more efficient than just using the gradient.
+
+- **Grad_buffer** is the derivative of the weights with respect to the rewards.
+- **Rmsprop_cache** is a cache of the previous updates to the weights.
+- **Learning_rate** determines how much we update the weights by.
+- **Decay_rate** determines how much we care about the previous updates to the weights.
 
 ## Results
 
