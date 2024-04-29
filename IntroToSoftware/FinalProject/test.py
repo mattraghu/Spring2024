@@ -13,6 +13,9 @@ fig = plt.figure(figsize=(6, 6))
 
 ax = fig.add_subplot(111, projection='3d')
 
+# show lagend
+ax.legend(['Voxels', 'Arrow', 'Start', 'Goal', 'Path']) 
+
 # Set limits and labels
 scale = .4
 ax.set_xlim([10*scale, -20*scale])
